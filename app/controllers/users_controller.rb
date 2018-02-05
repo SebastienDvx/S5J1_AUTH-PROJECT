@@ -1,10 +1,17 @@
 class UsersController < ApplicationController
+  def home
+  end
+
+  def reponse
+  end
+
   def new
     @user = User.new
   end
 
   def create
     @user = User.new(user_params)
+    flash[:success] = "Connexion avec succès le #{Date.today}"
     if @user.save
        redirect_to @user
     else
@@ -44,7 +51,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
 end
