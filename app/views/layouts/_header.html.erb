@@ -2,7 +2,7 @@
   <div class="container">
     <%= link_to "Secret App", root_path, id: "logo" %>
     <nav>
-        <%= link_to "Home", root_path %>
+        <span class = 'home'><%= link_to "Home", root_path %></span>
         <% if logged_in? %>
         <%= link_to "Users", '#' %>
 
