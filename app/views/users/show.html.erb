@@ -1,0 +1,10 @@
+<h1>Connecté  !</h1>
+
+<h3>Vous vous êtes connecté sous : </h3>
+email : <%= @user.email %>
+
+<p>
+  <%= link_to("Retour Index", users_path)%>
+  <%= link_to("Edit", edit_user_path)%>
+
+</p>
