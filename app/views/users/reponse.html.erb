@@ -1,5 +1,9 @@
-<div class = 'reponse-secrete'>
-  <h1>42</h1>
-</div>
+<% if logged_in? %>
 
-<%= link_to("LOGOUT", logout_path, method: :delete ) %>
+  <div class = 'reponse-secrete'>
+    <h1>42</h1>
+  </div>
+  <%= link_to("LOGOUT", logout_path, method: :delete ) %>
+<% else %>
+  <%= "Bien essayé petit malin... Va vite te " %><%= link_to "connecter", login_path %>
+<% end %>

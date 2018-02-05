@@ -3,6 +3,10 @@ class UsersController < ApplicationController
   end
 
   def reponse
+    if logged_in? == false
+      flash.now[:warning] = "hey login-toi pour y accéder"
+
+    end
   end
 
   def new
