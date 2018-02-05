@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     flash[:success] = "Connexion avec succès le #{Date.today}"
     if @user.save
+      log_in(@user)
        redirect_to @user
     else
        render 'new'

@@ -1,33 +1,32 @@
 <h1>Identification</h1>
 
-<%= form_for(@user) do |f| %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@user) do |f| %>
 
-<p>
-  <%= f.label :email %>
-</p>
-  <%= f.text_field :email %>
+      <p>
+        <%= f.label :email %>
+      </p>
+        <%= f.text_field :email, class: 'form-control' %>
 
+      <p>
+        <%= f.label :password %>
+      </p>
+        <%= f.password_field :password, class: 'form-control' %>
 
-<p>
-  <%= f.label :password %>
-</p>
-  <%= f.password_field :password %>
+      <p>
+        <%= f.label :password_confirmation, "Confirmation" %>
+      </p>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+      </br></br>
 
+        <%= f.submit "Log In", class: "btn btn-primary" %>
 
-<p>
-  <%= f.label :password_confirmation, "Confirmation" %>
-</p>
-  <%= f.password_field :password_confirmation %>
+      <% end %>
 
-
-</br></br>
-
-  <%= f.submit "Log In" %>
-
-<% end %>
-
-
-<p>
-  Déjà inscrit? Connectez-vous <%= link_to("ici", login_path ) %>
-</p>
+      <p>
+        Déjà inscrit? Connectez-vous <%= link_to("ici", login_path ) %>
+      </p>
+  </div>
+</div>
