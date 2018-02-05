@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email])
       if user && user.authenticate(params[:session][:password])
         log_in(user)
+        flash[:success] = "Bienvenue dans l'app secrète"
         redirect_to user
       else
         flash.now[:danger] = "Mauvaise combinaison email/password"
