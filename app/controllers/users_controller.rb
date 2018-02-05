@@ -15,8 +15,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    flash[:success] = "Connexion avec succès le #{Date.today}"
     if @user.save
+      flash[:success] = "Connexion avec succès le #{Date.today}"
       log_in(@user)
        redirect_to @user
     else

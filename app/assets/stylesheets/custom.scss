@@ -3,10 +3,9 @@
  @import "bootstrap";
  @import "bootswatch/spacelab/bootswatch";
 
- .Body_Home
+ body
  {
-   // background-color:grey ;
-   margin-left : 50px
+   padding: 70px;
  }
 
 header
@@ -30,4 +29,9 @@ header
 {
   margin-left: 650px;
   margin-top: 200px;
+}
+
+.row
+{
+  margin-left: 75px;
 }
