@@ -1,4 +1,15 @@
  // import scss file
- @import "bootswatch/sketchy/variables";
+ @import "bootswatch/spacelab/variables";
  @import "bootstrap";
- @import "bootswatch/sketchy/bootswatch";
+ @import "bootswatch/spacelab/bootswatch";
+
+ .Body_Home
+ {
+   // background-color:grey ;
+   margin-left : 50px
+ }
+
+header
+{
+  background-color: orange;
+}
