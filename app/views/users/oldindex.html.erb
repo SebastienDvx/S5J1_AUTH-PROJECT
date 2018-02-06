@@ -1,0 +1,26 @@
+<h1>Users#index</h1>
+
+<h2>Liste des emails</h2>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th colspan="3"></th>
+  </tr>
+
+  <% @users.each do |user|  %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= link_to("Voir", user_path(user))%></td>
+      <td><%= link_to("Edit", edit_user_path(user))%></td>
+      <td><%= link_to "Supprimer", user_path(user),
+                        method: :delete,
+                        data: { confirm: "Etes-vous sûr?"}%></td>
+
+    </tr>
+  <% end %>
+</table>
+
+<p>
+<%= link_to("Créer un compte", new_user_path ) %>
+</p>
